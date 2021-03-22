@@ -1,5 +1,8 @@
 class Turn {
-  constructor() {
+  constructor(guess) {
+    if (typeof guess === "string") {
+      this.guess = guess;
+      }
 
   }
 }
