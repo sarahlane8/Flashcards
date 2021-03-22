@@ -4,6 +4,7 @@ class Turn {
       this.guess = guess;
       }
     this.card = card;
+
   }
 
   returnGuess() {
@@ -12,6 +13,14 @@ class Turn {
 
   returnCard() {
     return this.card;
+  }
+
+  evaluateGuess() {
+    if (this.guess === this.card.correctAnswer) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
