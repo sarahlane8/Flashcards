@@ -16,7 +16,7 @@ describe('Turn', function() {
     expect(turn.guess).to.equal('array');
   });
 
-  it('should only accept a user\s guess as an argument if it is a string', function() {
+  it('should only accept a user\'s guess as an argument if it is a string', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('array');
     expect(turn.guess).to.equal('array');
@@ -28,5 +28,10 @@ describe('Turn', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('array', card);
     expect(turn.card).to.equal(card);
+  })
+
+  it('should have a method that returns the user\'s guess', function() {
+    const turn = new Turn('array');
+    expect(turn.returnGuess()).to.equal('array');
   })
 })
