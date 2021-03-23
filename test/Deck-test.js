@@ -7,7 +7,6 @@ const Card = require('../src/Card.js');
 describe('Deck', function() {
 
   it('should be a function', function() {
-    const deck = new Deck();
   })
 
   it('should be instantiated with cards', function() {
