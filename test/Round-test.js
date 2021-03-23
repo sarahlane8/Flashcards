@@ -23,7 +23,7 @@ describe('Round', function() {
   });
 
   it('should have a property of currentCard', function() {
-    expect(round.currentCard).to.deep.equal({});
+    expect(round.currentCard).to.deep.equal(deck[0]);
   });
 
 
@@ -32,7 +32,7 @@ describe('Round', function() {
   })
 
 
-  it.skip('should have a takeTurn method that updates the turns count', function() {
+  it('should have a takeTurn method that updates the turns count', function() {
     expect(round.turns).to.equal(0);
     round.takeTurn();
     expect(round.turns).to.equal(1);
