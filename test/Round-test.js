@@ -23,9 +23,9 @@ describe('Round', function() {
   // });
 
   it('should have a property of currentCard', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
@@ -34,9 +34,9 @@ describe('Round', function() {
     // expect(round.currentCard).to.deep.equal(round.deck.card[0]);
   });
   it('should have the first card in the deck as the currentCard at start of round', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
@@ -45,9 +45,9 @@ describe('Round', function() {
 
 
   it('should return the current card', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
@@ -56,9 +56,9 @@ describe('Round', function() {
 
 
   it('should increment the turns count', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
@@ -69,18 +69,18 @@ describe('Round', function() {
 
 //NEED HELP WITH THIS ONE WHAT TO TEST?
   it.skip('should instantiate a new Turn after a guess is made', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
   })
 
   it('should change the current card to the next card in the deck', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
@@ -93,13 +93,13 @@ describe('Round', function() {
   })
 
   it.skip('should evaluate the user\'s guess', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
-    round.takeTurn('object');
+    round.takeTurn('Home');
     expect
     // round.takeTurn('method');
     //how do I test this??? return true or false, record the wrong answer id?
@@ -107,53 +107,53 @@ describe('Round', function() {
   })
 
   it('should add the card ID of incorrect answers to an array', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
-    round.takeTurn('method');
+    round.takeTurn('Everything');
     expect(round.incorrectGuesses).to.deep.equal([1]);
   })
 
   it.skip('should give the user feedback after they guess', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
-    round.takeTurn('object');
+    round.takeTurn('Home');
     //how do I test the outcome of a method on another class?
   })
 
   it('should calculate the percentage of correct guesses', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
 
-    round.takeTurn('object');
-    round.takeTurn('function');
-    round.takeTurn('accessor method');
+    round.takeTurn('Home');
+    round.takeTurn('Adriana');
+    round.takeTurn('Quebec');
 
     expect(round.calculatePercentCorrect()).to.equal(33);
   })
 
   it.skip('should tell the user when the round is over', function() {
-    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
-    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
+    card2 = new Card(2, 'What is Michael Buble\'s wife\'s name?', ['Adriana', 'Luisana', 'Mariana'], 'Luisana');
+    card3 = new Card(3, 'Where is Michael Buble from?', ['Quebec', 'Montreal', 'Burnaby'], 'Burnaby');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
 
-    round.takeTurn('object');
-    round.takeTurn('function');
-    round.takeTurn('accessor method');
+    round.takeTurn('Home');
+    round.takeTurn('Adriana');
+    round.takeTurn('Quebec');
 
     round.endRound();
     //how do i test this?? I need to ensure it returns **Round over!** etc
