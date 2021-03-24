@@ -69,7 +69,7 @@ describe('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   })
 
-  it('should give the user feedback after they guess', function() {
+  it.skip('should give the user feedback after they guess', function() {
     expect(round.takeTurn('Home')).to.equal('Correct!')
   })
 
@@ -82,7 +82,7 @@ describe('Round', function() {
     expect(round.calculatePercentCorrect()).to.equal(33);
   })
 
-  it.skip('should tell the user when the round is over', function() {
+  it('should tell the user when the round is over', function() {
 
     round.takeTurn('Home');
     round.takeTurn('Adriana');

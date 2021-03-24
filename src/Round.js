@@ -17,17 +17,14 @@ class Round {
     let turn = new Turn(guess, this.currentCard);
     this.turns++;
     let guessEvaluation = turn.evaluateGuess();
-    if (guessEvaluation === false) {
-      // console.log('line 21')
-// console.log(this.incorrectGuesses);
+    if (!guessEvaluation) {
       this.incorrectGuesses.push(this.currentCard.id);
-      // console.log(this.incorrectGuesses);
     }
-    turn.giveFeedback();
-    // console.log(this.deck.cards)
+    //CHECK THE ORDER OF THE FOLLOWING LINES!!
+    //maybe do let feedback = turn.giveFeedback() then return feedback at final line of method
     this.deck.cards.shift()
     this.currentCard = this.deck.cards[0];
-    // console.log(this.deck.cards)
+    return turn.giveFeedback();
   }
 
   calculatePercentCorrect() {
@@ -37,7 +34,7 @@ class Round {
   }
 
   endRound() {
-    return `**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
 
 }
