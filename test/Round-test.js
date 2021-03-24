@@ -106,13 +106,41 @@ describe('Round', function() {
 
   })
 
-  it('should give the user feedback after they guess', function() {
+  it('should add the card ID of incorrect answers to an array', function() {
     card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
     card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
+    round.takeTurn('method');
+    expect(round.incorrectGuesses).to.deep.equal([1]);
+  })
+
+  it.skip('should give the user feedback after they guess', function() {
+    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
+    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    cards = [card1, card2, card3];
+    deck = new Deck(cards);
+    round = new Round(deck);
+    round.takeTurn('object');
+    //how do I test the outcome of a method on another class?
+  })
+
+  it('should calculate and return the percentage of correct guesses', function() {
+    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
+    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    cards = [card1, card2, card3];
+    deck = new Deck(cards);
+    round = new Round(deck);
+
+    round.takeTurn('object');//true
+    round.takeTurn('function'); //false
+    round.takeTurn('accessor method'); //false
+
+    expect(round.calculatePercentCorrect()).to.equal(33);
   })
 
 });
