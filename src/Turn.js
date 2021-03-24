@@ -16,6 +16,8 @@ class Turn {
   }
 
   evaluateGuess() {
+    // console.log(this.card.correctAnswer);
+    // console.log(this.guess);
     if (this.guess === this.card.correctAnswer) {
       return true;
     } else {
@@ -25,8 +27,10 @@ class Turn {
 
   giveFeedback() {
     if (this.evaluateGuess()) {
+      // console.log('correct')
       return 'correct!';
     } else {
+      // console.log('incorrect')
       return 'incorrect!';
     }
   }
