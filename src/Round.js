@@ -2,10 +2,12 @@ const Turn = require('../src/Turn.js');
 
 class Round {
   constructor(deck) {
+    // console.log(deck.cards);
     this.deck = deck;
     this.currentCard = deck.cards[0];
-    this.turns = 0;//3
-    this.incorrectGuesses = [];//2
+    // console.log(deck.cards[0]);
+    this.turns = 0;
+    this.incorrectGuesses = [];
   }
 
   returnCurrentCard() {
