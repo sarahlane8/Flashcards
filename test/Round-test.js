@@ -128,7 +128,7 @@ describe('Round', function() {
     //how do I test the outcome of a method on another class?
   })
 
-  it('should calculate and return the percentage of correct guesses', function() {
+  it('should calculate the percentage of correct guesses', function() {
     card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
     card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
@@ -136,11 +136,28 @@ describe('Round', function() {
     deck = new Deck(cards);
     round = new Round(deck);
 
-    round.takeTurn('object');//true
-    round.takeTurn('function'); //false
-    round.takeTurn('accessor method'); //false
+    round.takeTurn('object');
+    round.takeTurn('function');
+    round.takeTurn('accessor method');
 
     expect(round.calculatePercentCorrect()).to.equal(33);
+  })
+
+  it.skip('should tell the user when the round is over', function() {
+    card1 = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    card2 = new Card(2, 'What is a comma-separate listed of related values?', ['array', 'object', 'function'], 'array');
+    card3 = new Card(3, 'What type of prototype method directly modifies the existing array?', ['mutator method', 'accessor method', 'iteration method'], 'mutator method');
+    cards = [card1, card2, card3];
+    deck = new Deck(cards);
+    round = new Round(deck);
+
+    round.takeTurn('object');
+    round.takeTurn('function');
+    round.takeTurn('accessor method');
+
+    round.endRound();
+    //how do i test this?? I need to ensure it returns **Round over!** etc
+
   })
 
 });
