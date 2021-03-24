@@ -3,6 +3,7 @@ const expect = chai.expect;
 const Round = require('../src/Round.js');
 const Deck = require('../src/Deck.js');
 const Card = require('../src/Card.js');
+const Turn = require('../src/Turn.js');
 
 describe('Round', function() {
   let card1
@@ -11,6 +12,7 @@ describe('Round', function() {
   let cards
   let deck
   let round
+  let turn
 
   beforeEach(function() {
     card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
@@ -19,7 +21,12 @@ describe('Round', function() {
     cards = [card1, card2, card3];
     deck = new Deck(cards);
     round = new Round(deck);
+    turn = new Turn('home', card1)
   });
+
+  it('should be an instance of Round', function() {
+    expect(round).to.be.instanceof(Round);
+  })
 
   it('should have a property of currentCard', function() {
     expect(round).to.have.property('currentCard');
@@ -29,11 +36,9 @@ describe('Round', function() {
     expect(round.currentCard).to.deep.equal(round.deck.cards[0])
   })
 
-
   it('should return the current card', function() {
     expect(round.returnCurrentCard()).to.deep.equal(round.currentCard);
   })
-
 
   it('should increment the turns count', function() {
     expect(round.turns).to.equal(0);
@@ -41,9 +46,8 @@ describe('Round', function() {
     expect(round.turns).to.equal(1);
   })
 
-//NEED HELP WITH THIS ONE WHAT TO TEST?
-  it.skip('should instantiate a new Turn after a guess is made', function() {
-
+  it('should instantiate a new Turn after a guess is made', function() {
+    expect(turn).to.be.instanceof(Turn);
   })
 
   it('should change the current card to the next card in the deck', function() {
@@ -55,24 +59,18 @@ describe('Round', function() {
     expect(card1Id).to.not.equal(card2Id);
   })
 
-  it.skip('should evaluate the user\'s guess', function() {
-
-    round.takeTurn('Home');
-    expect
-    // round.takeTurn('method');
-    //how do I test this??? return true or false, record the wrong answer id?
-
-  })
-
-  it('should add the card ID of incorrect answers to an array', function() {
+  it('should add the card ID of incorrect answers to incorrectGuesses', function() {
     round.takeTurn('Everything');
     expect(round.incorrectGuesses).to.deep.equal([1]);
   })
 
-  it.skip('should give the user feedback after they guess', function() {
-
+  it('should not add the card ID of correct answers to incorrectGuesses', function() {
     round.takeTurn('Home');
-    //how do I test the outcome of a method on another class?
+    expect(round.incorrectGuesses).to.deep.equal([]);
+  })
+
+  it('should give the user feedback after they guess', function() {
+    expect(round.takeTurn('Home')).to.equal('Correct!')
   })
 
   it('should calculate the percentage of correct guesses', function() {
