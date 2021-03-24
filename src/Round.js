@@ -3,9 +3,10 @@ const Turn = require('../src/Turn.js');
 class Round {
   constructor(deck) {
     this.deck = deck;
+    // console.log(deck)
     this.currentCard = deck.cards[0];
-    this.turns = 0;//3
-    this.incorrectGuesses = [];//2
+    this.turns = 0;
+    this.incorrectGuesses = [];
   }
 
   returnCurrentCard() {
@@ -19,8 +20,11 @@ class Round {
     if (!guessEvaluation) {
       this.incorrectGuesses.push(this.currentCard.id);
     }
-    turn.giveFeedback();
+    //CHECK THE ORDER OF THE FOLLOWING LINES!!
+    //maybe do let feedback = turn.giveFeedback() then return feedback at final line of method
     this.deck.cards.shift()
+    this.currentCard = this.deck.cards[0];
+    return turn.giveFeedback();
   }
 
   calculatePercentCorrect() {
@@ -30,10 +34,10 @@ class Round {
   }
 
   endRound() {
-    return `**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
-  
-};
+
+}
 
 
 module.exports = Round;
