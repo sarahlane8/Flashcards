@@ -20,8 +20,6 @@ class Round {
     if (!guessEvaluation) {
       this.incorrectGuesses.push(this.currentCard.id);
     }
-    //CHECK THE ORDER OF THE FOLLOWING LINES!!
-    //maybe do let feedback = turn.giveFeedback() then return feedback at final line of method
     this.deck.cards.shift()
     this.currentCard = this.deck.cards[0];
     return turn.giveFeedback();
@@ -32,11 +30,10 @@ class Round {
     let percentage = (correctGuesses / this.turns) * 100;
     return Math.round(percentage)
   }
-
+  
   endRound() {
     console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
-
 }
 
 
