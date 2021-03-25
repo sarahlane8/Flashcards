@@ -1,9 +1,9 @@
 const Turn = require('../src/Turn.js');
+const Game = require('../src/Game.js')
 
 class Round {
   constructor(deck) {
     this.deck = deck;
-    // console.log(deck)
     this.currentCard = deck.cards[0];
     this.turns = 0;
     this.incorrectGuesses = [];
@@ -30,11 +30,15 @@ class Round {
     let percentage = (correctGuesses / this.turns) * 100;
     return Math.round(percentage)
   }
-  
+
   endRound() {
-    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    // if (this.calculatePercentCorrect() < 90) {
+    //   let game = new Game();
+    //   game.start()
+    // } else {
+      console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    // }
   }
 }
-
 
 module.exports = Round;

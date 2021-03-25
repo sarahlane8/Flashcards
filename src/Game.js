@@ -7,7 +7,7 @@ const Card = require('../src/Card.js');
 
 class Game {
   constructor() {
-    this.currentRound = null;//what do i do with this
+    this.currentRound = null;
   }
 
   start() {
@@ -16,7 +16,7 @@ class Game {
     });
     const deck = new Deck(cards);
     const round = new Round(deck);
-    // this.currentRound = round;
+    this.currentRound = round;
     this.printMessage(deck, round);
     this.printQuestion(round);
   }
