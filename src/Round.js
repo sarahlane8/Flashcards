@@ -13,7 +13,7 @@ class Round {
   }
 
   takeTurn(guess) {
-    let turn = new Turn(guess, this.currentCard);
+    const turn = new Turn(guess, this.currentCard);
     this.turns++;
     if (!turn.evaluateGuess()) {
       this.incorrectGuesses.push(this.currentCard.id);
@@ -24,8 +24,8 @@ class Round {
   }
 
   calculatePercentCorrect() {
-    let correctGuesses = (this.turns - this.incorrectGuesses.length);
-    let percentage = (correctGuesses / this.turns) * 100;
+    const correctGuesses = (this.turns - this.incorrectGuesses.length);
+    const percentage = (correctGuesses / this.turns) * 100;
     return Math.round(percentage)
   }
 

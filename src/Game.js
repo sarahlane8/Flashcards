@@ -11,8 +11,8 @@ class Game {
   }
 
   start() {
-    const cards = prototypeQuestions.map(card => {
-      return new Card(card.id, card.question, card.answers, card.correctAnswer)
+    const cards = prototypeQuestions.map(({id, question, answers, correctAnswer}) => {
+      return new Card(id, question, answers, correctAnswer)
     });
     const deck = new Deck(cards);
     const round = new Round(deck);
