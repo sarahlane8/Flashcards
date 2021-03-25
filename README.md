@@ -1,4 +1,4 @@
-### Flashcards
+# Flashcards
 
 Welcome to Flashcards! This application is run entirely in the terminal.  It consists of 30 questions on flashcards with 3 possible answers you can choose from.  The game will tell you if your guess is correct or incorrect, and then move on to the next question.  At the end of the round, it will tell you the percentage of correct answers you had.
 
