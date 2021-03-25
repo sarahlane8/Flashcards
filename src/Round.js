@@ -1,5 +1,4 @@
 const Turn = require('../src/Turn.js');
-const Game = require('../src/Game.js')
 
 class Round {
   constructor(deck) {
@@ -32,12 +31,7 @@ class Round {
   }
 
   endRound() {
-    // if (this.calculatePercentCorrect() < 90) {
-    //   let game = new Game();
-    //   game.start()
-    // } else {
-      console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
-    // }
+    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
   }
 }
 
