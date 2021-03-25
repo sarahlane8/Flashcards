@@ -1,4 +1,6 @@
-# FlashCards Starter Kit
+![Demo](https://media.giphy.com/media/Ya3oafzWGd2TcD1yrT/giphy.gif)
+
+
 
 ## Fork This Repo
 
