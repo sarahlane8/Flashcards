@@ -1,9 +1,9 @@
 const Turn = require('../src/Turn.js');
+const Game = require('../src/Game.js')
 
 class Round {
   constructor(deck) {
     this.deck = deck;
-    // console.log(deck)
     this.currentCard = deck.cards[0];
     this.turns = 0;
     this.incorrectGuesses = [];
@@ -20,8 +20,6 @@ class Round {
     if (!guessEvaluation) {
       this.incorrectGuesses.push(this.currentCard.id);
     }
-    //CHECK THE ORDER OF THE FOLLOWING LINES!!
-    //maybe do let feedback = turn.giveFeedback() then return feedback at final line of method
     this.deck.cards.shift()
     this.currentCard = this.deck.cards[0];
     return turn.giveFeedback();
@@ -34,10 +32,13 @@ class Round {
   }
 
   endRound() {
-    console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    // if (this.calculatePercentCorrect() < 90) {
+    //   let game = new Game();
+    //   game.start()
+    // } else {
+      console.log(`**Round over!** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
+    // }
   }
-
 }
-
 
 module.exports = Round;

@@ -69,8 +69,8 @@ describe('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   })
 
-  it.skip('should give the user feedback after they guess', function() {
-    expect(round.takeTurn('Home')).to.equal('Correct!')
+  it('should give the user feedback after they guess', function() {
+    expect(round.takeTurn('Home')).to.equal('correct!')
   })
 
   it('should calculate the percentage of correct guesses', function() {
@@ -89,7 +89,6 @@ describe('Round', function() {
     round.takeTurn('Quebec');
 
     round.endRound();
-    //how do i test this?? I need to ensure it returns **Round over!** etc
 
   })
 
