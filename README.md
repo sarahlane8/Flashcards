@@ -8,6 +8,6 @@ Welcome to Flashcards! This application is run entirely in the terminal.  It con
 
 ## Install
 
-Clone down this repo and enter the directory through the terminal.  Once in the root directory, run `node index.js`.  This will automatically start the game!
+Clone down this repo and enter the directory through the terminal.  Once in the root directory, run `node index.js`.  This will automatically start the game!  Each question will display separately.  Answer each question by using the up and down arrows, and hitting enter when you've made your choice, or by typing in the corresponding number to the question.  The game will tell you if you are correct or incorrect, then hit enter to display the next question!
 
 
