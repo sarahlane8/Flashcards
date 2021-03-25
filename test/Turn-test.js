@@ -22,7 +22,7 @@ describe('Turn', function() {
   });
 
   it('should know which card is currently in play', function() {
-    expect(turn.card).to.equal(card);
+    expect(turn.card).to.deep.equal(card);
   })
 
   it('should return the user\'s guess', function() {

@@ -29,5 +29,5 @@ describe('Deck', function() {
   it('should know how many Cards are in the Deck', function() {
     expect(deck.countCards()).to.equal(3);
   })
-  
+
 })
