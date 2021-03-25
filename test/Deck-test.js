@@ -4,7 +4,7 @@ const expect = chai.expect;
 const Deck = require('../src/Deck.js');
 const Card = require('../src/Card.js');
 
-describe('Deck', function() {
+describe('Deck', () => {
   let card1
   let card2
   let card3
