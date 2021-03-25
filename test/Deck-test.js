@@ -19,14 +19,14 @@ describe('Deck', function() {
     deck = new Deck(cards);
   });
 
-  it('should be a function', function() {
+  it('should be a function', () => {
   })
 
-  it('should be instantiated with cards', function() {
+  it('should be instantiated with cards', () => {
     expect(deck.cards).to.deep.equal(cards);
   })
 
-  it('should know how many Cards are in the Deck', function() {
+  it('should know how many Cards are in the Deck', () => {
     expect(deck.countCards()).to.equal(3);
   })
 
