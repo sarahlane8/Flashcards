@@ -4,11 +4,7 @@ const Deck = require('../src/Deck.js');
 const Card = require('../src/Card.js');
 
 describe('Deck', () => {
-  let card1
-  let card2
-  let card3
-  let cards
-  let deck
+  let card1, card2, card3, cards, deck
 
   beforeEach(function() {
     card1 = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');

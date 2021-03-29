@@ -7,17 +7,13 @@ const Card = require('../src/Card.js');
 const data = require('../src/data.js');
 
 describe('Game', function() {
-  let game
-  let prototypeQuestions
-  let cards
-  let deck
-  let round
+  let game, prototypeQuestions, cards, deck, round
 
   beforeEach(function() {
     game = new Game;
     prototypeQuestions = data.prototypeData;
-    cards = prototypeQuestions.map(card => {
-      return new Card(card.id, card.question, card.answers, card.correctAnswer)
+    cards = prototypeQuestions.map(( {id, question, answers, correctAnswer} ) => {
+      return new Card(id, question, answers, correctAnswer)
     });
     deck = new Deck(cards);
     round = new Round(deck);
