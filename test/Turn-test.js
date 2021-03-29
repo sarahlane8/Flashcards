@@ -4,8 +4,7 @@ const Turn = require('../src/Turn.js');
 const Card = require('../src/Card.js');
 
 describe('Turn', () => {
-  let card
-  let turn
+  let card, turn
 
   beforeEach( () => {
     card = new Card(1, 'What is Michael Buble\'s biggest hit?', ['Home', 'Everything', 'Feelin\' Good'], 'Home');
